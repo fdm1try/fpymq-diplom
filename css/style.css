@@ -56,11 +56,9 @@ body, html {
     z-index: 1;    
 }
 
-
-
 .header__container {
     position: relative;
-    width: 1170px;    
+    max-width: 1170px;    
     width: 70.5%;
     height: 100%;
     display: flex;
@@ -320,15 +318,18 @@ body, html {
     text-decoration: underline;
 }
 
-.post__title {
+.post__title {    
+    margin: 0.3em 0;
+    text-decoration: none;    
+}
+
+.post__title h3 {
+    color: black;
     font-family: OpenSans-Bold;
     font-weight: 100;
     font-size: 1.33em;
-    line-height: 1.2em;
+    line-height: 1.25em;
     text-transform: uppercase;
-    margin: 0.3em 0;
-    text-decoration: none;
-    color: black;
 }
 
 .post__title:hover {
@@ -361,7 +362,7 @@ body, html {
 }
 
 .post__content p {
-    margin: 0.4em 0 0 0;
+    margin: 0.5em 0 0 0;
 }
 
 .sidebar {
@@ -490,6 +491,7 @@ body, html {
 
 .subscribe__email:focus, .subscribe__email:hover {
     border-bottom: 1px solid #b59f5b;
+    cursor: pointer;
 }
 
 .subscribe__submit {
@@ -504,10 +506,6 @@ body, html {
     color: white;
     margin-top: 1.3em;
     padding: 0.3em 0;
-}
-
-.search__submit:hover, .subscribe__submit:hover {
-    cursor: pointer;
 }
 
 .taglist {
