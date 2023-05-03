@@ -13,7 +13,6 @@
     padding: 0;
 }
 
-/* MOBILE */
 body, html {
     font-size: 75.2%;
     font-family: OpenSans-Regular, sans-serif;
@@ -487,7 +486,7 @@ body {
 
 .search {
     font-size: 1.1rem;
-    margin-top: 4.6em;
+    margin-top: 4.5em;
 }
 
 .search form {
@@ -536,11 +535,10 @@ body {
 
 .subscribe__title {
     font-size: 1.21em;
-    margin-bottom: 1em;
 }
 
 .subscribe__form {
-    margin-top: 1.7em;
+    margin-top: 1.5em;
 }
 
 .subscribe__email {
@@ -632,10 +630,10 @@ body {
     font-weight: 100;    
     line-height: 1.2em;
     box-sizing: border-box;
-    padding: 0.84em 0;
+    padding: 0.92em 0;
     width: 100%;
     text-align: left;
-    border-bottom: 2px solid #ededed;
+    border-bottom: 1px solid #ededed;
 }
 
 .theme__list {
@@ -704,7 +702,7 @@ body {
     justify-content: stretch;
     flex-direction: column;
     flex-basis: 100%;
-    margin-top: 1.38em;
+    margin-top: 1.3em;
 }
 
 .shop__item__pic {
@@ -875,7 +873,7 @@ body {
 }
 
 .popup__wrapper {
-    position: absolute;
+    position: fixed;
     width: 100%;
     top: 0;
     left: 0;
@@ -885,20 +883,37 @@ body {
     z-index: 10;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     box-sizing: content-box;
 }
 
+@media (max-height: 590px) {
+    /* 
+        Для того чтобы форма оставалась доступной
+        на всех мобильных устройствах в пейзажной ориентации
+     */
+    .popup__wrapper {
+        position: absolute;
+        align-items: flex-start;
+        padding-top: 30px;
+    }
+}
+
 .popup {
-    background: white;
+    position: relative;
     width: 100%;
     margin: 15px;
+    background: white;    
     padding: 1.9em 25px 2.4em 25px;
     box-sizing: border-box;
-    position: relative;
-    top: 3.2em;
     font-size: 1.1rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
+
+
 
 .popup__title {
     text-align: center;    
@@ -1168,13 +1183,13 @@ body {
     .content_container {
         padding: 0 35px;
         flex-direction: row;
-        
+        margin-top: 40px;
     }
 
     .posts {
-        flex-basis: 55.9%;
-        margin: 0;
-        padding-top: 47px;
+        margin-top: 6px;
+        flex-basis: 100%;
+        flex-shrink: 1;
     }
 
     .post {
@@ -1217,9 +1232,10 @@ body {
     }
 
     .sidebar {
-        flex-basis: 39%;
+        flex-basis: 273px;
+        flex-shrink: 0;
         margin-top: 0;
-        padding-top: 3.3em;
+        margin-left: 35px;
     }    
 
     .news__title, .subscribe__title, .taglist__title, .themes__title {
@@ -1255,7 +1271,11 @@ body {
     }
 
     .themes {
-        margin-top: 2.4em;
+        margin-top: 2.6em;
+    }
+
+    .theme {
+        padding: 0.92em 0;
     }
 
     .shop {
@@ -1265,7 +1285,7 @@ body {
 
     .shop__title {
         font-size: 1.15em;
-        line-height: 1.3em;
+        line-height: 1.1em;
     }
 
     .shop__items {
@@ -1296,7 +1316,7 @@ body {
         padding-top: 1.8em;
         padding-bottom: 1.7em;
         padding: 1.8em 1.4em 1.6em 1.2em;
-        margin-top: -2.8em;
+        margin-top: -2.5em;
     }
 
     .shop__item__title {
@@ -1323,9 +1343,12 @@ body {
 
     .popup {
         width: 390px;
-        top: 220px;
         font-size: 13px;
         padding: 50px 29px;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
     }
 
     .popup__title {
@@ -1474,12 +1497,12 @@ body {
         flex-direction: row;        
         width: 1200px;
         padding: 0 15px;
+        margin-top: 52px;
     }
     
     .posts {
         flex-basis: 67%;
         font-size: 1.27rem;
-        padding-top: 3.9em;
     }
     
     .post {
@@ -1527,7 +1550,7 @@ body {
         margin: 0 0 0 auto;
         flex-basis: 23.2%;
         font-size: 1.27rem;
-        padding-top: 3.5em;
+        padding-top: 0;
     }
     
     .news__title, .subscribe__title, .taglist__title, .themes__title {
@@ -1541,7 +1564,7 @@ body {
 
     .news__title {
         font-size: 0.93em;
-        margin-bottom: 1.1em;
+        margin-bottom: 1.3em;
     }
 
     .news__post__info {
@@ -1601,7 +1624,7 @@ body {
     }
     
     .shop {
-        margin: 1.4em auto 0 auto;
+        margin: 1.6em auto 0 auto;
         width: 1200px;
         padding: 0 15px;
         font-size: 1.7rem;
@@ -1622,7 +1645,7 @@ body {
     
     .shop__item {
         flex-basis: 29.9%;
-        margin-top: 1.15em;
+        margin-top: 1.1em;
     }
     
     .shop__item:nth-child(3n+3){
@@ -1642,6 +1665,7 @@ body {
     
     .shop__item__title {
         font-size: 1em;
+        margin-top: 1em;
     }
     
     .shop__item__description {
@@ -1688,8 +1712,11 @@ body {
     
     .popup {
         padding: 29px;
-        padding-bottom: 55px;
-        top: 230px;
+        padding-bottom: 55px;     
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
     }
     
     .popup__title {
